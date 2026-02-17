@@ -1,0 +1,1 @@
+- Build a Java high-throughput fan-out engine that streams CSV/JSONL, applies per-sink transformations (JSON/Protobuf/XML/Avro-map), dispatches to mock sinks with rate limiting + backpressure, retries, DLQ, and prints metrics every 5s.

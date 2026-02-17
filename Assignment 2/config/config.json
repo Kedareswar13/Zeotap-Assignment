@@ -1,0 +1,46 @@
+{
+  "input": {
+    "path": "./data/sample.csv",
+    "format": "CSV",
+    "maxInFlight": 5000
+  },
+  "runtime": {
+    "workerThreads": 0,
+    "queueCapacityPerSink": 2000,
+    "maxRetries": 3,
+    "statusIntervalSeconds": 5
+  },
+  "sinks": [
+    {
+      "name": "rest",
+      "type": "REST",
+      "endpoint": "https://example.local/api/v1/index",
+      "rateLimitPerSecond": 50,
+      "failureProbability": 0.01
+    },
+    {
+      "name": "grpc",
+      "type": "GRPC",
+      "endpoint": "grpc://example.local:443",
+      "rateLimitPerSecond": 200,
+      "failureProbability": 0.01
+    },
+    {
+      "name": "mq",
+      "type": "MQ",
+      "endpoint": "kafka://topic.employee",
+      "rateLimitPerSecond": 500,
+      "failureProbability": 0.01
+    },
+    {
+      "name": "wide",
+      "type": "WIDE_COLUMN",
+      "endpoint": "cassandra://employees",
+      "rateLimitPerSecond": 1000,
+      "failureProbability": 0.01
+    }
+  ],
+  "dlq": {
+    "path": "./dlq/dlq.jsonl"
+  }
+}

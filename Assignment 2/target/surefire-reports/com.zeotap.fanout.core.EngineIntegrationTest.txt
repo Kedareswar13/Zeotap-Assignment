@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.zeotap.fanout.core.EngineIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.464 s -- in com.zeotap.fanout.core.EngineIntegrationTest
