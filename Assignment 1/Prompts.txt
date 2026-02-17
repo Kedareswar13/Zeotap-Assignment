@@ -1,0 +1,3 @@
+(This file is intended to contain prompts used with AI tooling during development.)
+
+- Initial prompt: Build a native durable execution engine in Java with SQLite persistence, step memoization, sequence tracking, concurrency safety, onboarding example, and CLI to simulate crash/resume.
